@@ -1,11 +1,11 @@
-About lsstdesc-gcr-catalogs
-===========================
+About lsstdesc-gcr-catalogs-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsstdesc-gcr-catalogs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/LSSTDESC/gcr-catalogs
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsstdesc-gcr-catalogs-feedstock/blob/main/LICENSE.txt)
 
 Summary: A repository of data catalogs for the LSST Dark Energy Science Collaboration (DESC)
 
