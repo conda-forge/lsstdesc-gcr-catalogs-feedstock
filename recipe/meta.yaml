@@ -33,6 +33,8 @@ requirements:
     - python-blosc2  # needed by pytables
 
 test:
+  source_files:
+    - tests/
   imports:
     - GCRCatalogs
   commands:
