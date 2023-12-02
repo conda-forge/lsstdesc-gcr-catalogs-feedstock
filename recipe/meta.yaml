@@ -1,5 +1,5 @@
 {% set name = "lsstdesc-gcr-catalogs" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/LSSTDESC/gcr-catalogs/archive/v{{ version }}.tar.gz
-  sha256: 08bb51a34d733d46e6821e3f6f72564555c856018a94b2431014d2d93deaf116
+  sha256: d01e04777488a97fc60a901e068910cb7829302e85d786f7b9d78854c8615e2b
 
 build:
   number: 0
@@ -30,14 +30,20 @@ requirements:
     - pandas
     - pyarrow
     - pytables
+    - python-blosc2  # needed by pytables
 
 test:
+  source_files:
+    - conftest.py
+    - tests/
   imports:
     - GCRCatalogs
   commands:
     - pip check
+    - pytest --no-catalog
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/LSSTDESC/gcr-catalogs
