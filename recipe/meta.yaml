@@ -10,7 +10,7 @@ source:
   sha256: 1fcee07b225bbd7d171c39cbba1669c396e6c04d845a7782e630e478102a4107
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,7 +24,7 @@ requirements:
     - requests
     - pyyaml
     - numpy
-    - astropy
+    - astropy-base
     - gcr >=0.9.2
     - h5py
     - healpy
