@@ -10,17 +10,17 @@ source:
   sha256: 1fcee07b225bbd7d171c39cbba1669c396e6c04d845a7782e630e478102a4107
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - pyyaml
     - numpy
@@ -45,6 +45,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/LSSTDESC/gcr-catalogs
