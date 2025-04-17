@@ -1,5 +1,5 @@
 {% set name = "lsstdesc-gcr-catalogs" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/LSSTDESC/gcr-catalogs/archive/v{{ version }}.tar.gz
-  sha256: 1fcee07b225bbd7d171c39cbba1669c396e6c04d845a7782e630e478102a4107
+  sha256: 3cdc91bf95c4d24306f9a0649cc6ed72625bd4543f60a2969f220a5a3250be85
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
